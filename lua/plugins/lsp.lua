@@ -10,6 +10,17 @@ return {
         exclude = { "vue", "cs" },
       },
       servers = {
+        ts_ls = {
+          enabled = false,
+        },
+        vtsls = {
+          filetypes = {
+            "javascript",
+            "javascriptreact",
+            "typescript",
+            "typescriptreact",
+          },
+        },
         omnisharp = {
           settings = {
             csharp = {

@@ -14,6 +14,11 @@ return {
           enabled = false,
         },
         vtsls = {
+          cmd = {
+            "/home/veltanvlad/.nvm/versions/node/v22.17.1/bin/node",
+            "/home/veltanvlad/.local/share/nvim/mason/packages/vtsls/node_modules/@vtsls/language-server/bin/vtsls.js",
+            "--stdio",
+          },
           filetypes = {
             "javascript",
             "javascriptreact",

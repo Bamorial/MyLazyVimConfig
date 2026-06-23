@@ -14,17 +14,18 @@ return {
           enabled = false,
         },
         vtsls = {
-          cmd = {
-            "/home/veltanvlad/.nvm/versions/node/v22.17.1/bin/node",
-            "/home/veltanvlad/.local/share/nvim/mason/packages/vtsls/node_modules/@vtsls/language-server/bin/vtsls.js",
-            "--stdio",
-          },
-          filetypes = {
-            "javascript",
-            "javascriptreact",
-            "typescript",
-            "typescriptreact",
-          },
+          cmd = (function()
+            local mason = vim.fn.stdpath("data") .. "/mason/packages/vtsls"
+            local node = vim.fn.exepath("node")
+            if node == "" then
+              return nil
+            end
+            return {
+              node,
+              mason .. "/node_modules/@vtsls/language-server/bin/vtsls.js",
+              "--stdio",
+            }
+          end)(),
         },
         omnisharp = {
           settings = {

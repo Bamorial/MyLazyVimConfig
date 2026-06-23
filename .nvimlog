@@ -1,1 +1,4 @@
 WRN 2026-06-17T17:36:47.970 ?.2        server_start:199: Failed to start server: operation not permitted: /run/user/1000/nvim.2.0
+WRN 2026-06-23T14:38:19.716 ?.52403    server_start:193: Failed to start server: operation not permitted: /var/folders/51/3mwppxjn40g9nt524j_ymfvr0000gn/T/nvim.veltanvlad/aTwAlq/nvim.52403.0
+WRN 2026-06-23T14:38:23.348 ?.52422    server_start:193: Failed to start server: operation not permitted: /var/folders/51/3mwppxjn40g9nt524j_ymfvr0000gn/T/nvim.veltanvlad/6dw25Q/nvim.52422.0
+WRN 2026-06-23T14:39:18.935 ?.52533    server_start:193: Failed to start server: operation not permitted: /var/folders/51/3mwppxjn40g9nt524j_ymfvr0000gn/T/nvim.veltanvlad/BQhNjX/nvim.52533.0

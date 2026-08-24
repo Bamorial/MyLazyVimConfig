@@ -9,6 +9,7 @@ return {
       picker = {
         sources = {
           explorer = {
+            follow_file = true,
             hidden = true,
             ignored = true,
           },

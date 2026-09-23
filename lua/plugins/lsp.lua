@@ -27,38 +27,12 @@ return {
             }
           end)(),
         },
+        -- Replaced by roslyn.nvim (see lua/plugins/csharp.lua): OmniSharp eagerly
+        -- analyzes and publishes diagnostics for the whole solution on startup
+        -- (65k+ notifications on a mid-size solution) and its memory grows
+        -- unbounded over a session, which is what was causing the freezes.
         omnisharp = {
-          settings = {
-            csharp = {
-              maxProjectFileCountForDiagnosticAnalysis = 0,
-              semanticHighlighting = {
-                enabled = false,
-              },
-              suppressBuildAssetsNotification = true,
-              suppressDotnetRestoreNotification = true,
-            },
-            dotnet = {
-              backgroundAnalysis = {
-                analyzerDiagnosticsScope = "none",
-                compilerDiagnosticsScope = "none",
-              },
-              codeLens = {
-                enableReferencesCodeLens = false,
-                enableTestsCodeLens = false,
-              },
-              fileBasedApps = {
-                enableAutomaticDiscovery = false,
-              },
-            },
-            MsBuild = {
-              LoadProjectsOnDemand = true,
-            },
-            RoslynExtensionsOptions = {
-              EnableAnalyzersSupport = false,
-              AnalyzeOpenDocumentsOnly = true,
-              EnableImportCompletion = false,
-            },
-          },
+          enabled = false,
         },
         omnisharp_mono = {
           enabled = false,

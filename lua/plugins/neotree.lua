@@ -12,6 +12,7 @@ return {
             follow_file = true,
             hidden = true,
             ignored = true,
+            exclude = { "bin", "obj" },
           },
         },
       },

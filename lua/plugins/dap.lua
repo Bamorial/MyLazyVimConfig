@@ -39,7 +39,7 @@ return {
           name = "Launch .NET assembly",
           request = "launch",
           program = function()
-            return vim.fn.input("Path to DLL: ", vim.fn.getcwd() .. "\\bin\\Debug\\", "file")
+            return vim.fn.input("Path to DLL: ", vim.fn.getcwd() .. "/bin/Debug/", "file")
           end,
           cwd = "${workspaceFolder}",
         },

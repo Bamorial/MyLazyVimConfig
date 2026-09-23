@@ -35,6 +35,9 @@ end
 map("n", "gd", lsp_request("textDocument/definition", vim.lsp.buf.definition), { desc = "Go to Definition" })
 map("n", "gi", lsp_request("textDocument/implementation", vim.lsp.buf.implementation), { desc = "Go to Implementation" })
 map("n", "gh", lsp_request("textDocument/hover", vim.lsp.buf.hover), { desc = "Hover Documentation" })
+map("n", "<leader>ge", function()
+  vim.diagnostic.open_float(nil, { scope = "cursor" })
+end, { desc = "Show Diagnostic Error" })
 
 -- Jump list navigation (after e.g. `gd`)
 map("n", "gb", "<cmd>normal! <C-o><cr>", { desc = "Jump back", silent = true })
